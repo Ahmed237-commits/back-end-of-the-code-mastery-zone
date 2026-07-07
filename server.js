@@ -114,7 +114,9 @@ app.post('/chat', async (req, res) => {
     res.status(500).json({ reply: 'Error communicating with AI' });
   }
 });
-
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
 // Error handling
 app.use(notFound);
 app.use(errorHandler);
